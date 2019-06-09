@@ -1,0 +1,13 @@
+{
+    "name": "patrickcamargo/trabalhobd",
+    "authors": [
+        {
+            "name": "patrickcamargo7",
+            "email": "patrickcsilv@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "fzaninotto/faker": "^1.8"
+    }
+}
