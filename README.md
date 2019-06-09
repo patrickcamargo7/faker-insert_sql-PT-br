@@ -1,6 +1,6 @@
 # Geração de Scripts de Inserção utilizando biblioteca Faker
 
-### Requerimentos
+### Requisitos
 - PHP 7.1^
 - Composer
 

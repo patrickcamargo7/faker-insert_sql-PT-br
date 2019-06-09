@@ -15,7 +15,11 @@ for ($i=0; $i<$rowsNumber; $i++) {
     $parseValues  = [];
 
     foreach ($columns as $column) {
-        if ($column['type'] == 'entre inteiros') {
+
+        if (!empty($column['value'])) {
+            $fakerValue = $column['value'];
+        }
+        else if ($column['type'] == 'entre inteiros') {
             $fakerValue = rand($column['rand_ini'], $column['rand_fin']);
         }
         else {

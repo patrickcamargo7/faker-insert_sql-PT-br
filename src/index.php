@@ -125,6 +125,7 @@
                     $clone.find('.input-type').attr('name', 'column['+ rand +'][type]');
                     $clone.find('.input-ini').attr('name', 'column['+ rand +'][rand_ini]');
                     $clone.find('.input-fin').attr('name', 'column['+ rand +'][rand_fin]');
+                    $clone.find('.input-value').attr('name', 'column['+ rand +'][value]');
 
                     $('table').append($clone);
                 });
