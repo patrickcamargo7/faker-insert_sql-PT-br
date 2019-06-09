@@ -22,6 +22,10 @@ for ($i=0; $i<$rowsNumber; $i++) {
         else if ($column['type'] == 'placa') {
             $fakerValue = sprintf("%s-%s", strtoupper(randAlphabet(3)), rand(1000, 9999));
         }        
+        else if ($column['type'] == 'dateTime') {
+            $fakerValue = $faker->{$column['type']};
+            $fakerValue = $fakerValue->format('Y-m-d h:i:s');
+        }           
         else if ($column['type'] == 'entre inteiros') {
             $fakerValue = rand($column['rand_ini'], $column['rand_fin']);
         }

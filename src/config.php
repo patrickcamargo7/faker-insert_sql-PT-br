@@ -71,27 +71,8 @@
                 'monthName',               // 'January'
                 'year',                    // '1993'
                 'century',                               // 'VI'
-                'timezone',                              // 'Europe/Paris'            
-                'unixTime',               // 58781813
-                'dateTime', // DateTime('2008-04-25 08:37:17', 'UTC')
-                'dateTimeAD', // DateTime('1800-04-29 20:38:49', 'Europe/Paris')
-                'iso8601',                 // '1978-12-09T10:10:29+0000'
-                'date', // '1979-06-09'
-                'time', // '20:49:42'
-                'dateTimeBetween', // DateTime('2003-03-15 02:00:49', 'Africa/Lagos')
-                'dateTimeInInterval', // DateTime('2003-03-15 02:00:49', 'Antartica/Vostok')
-                'dateTimeThisCentury',     // DateTime('1915-05-30 19:28:21', 'UTC')
-                'dateTimeThisDecade',      // DateTime('2007-05-29 22:30:48', 'Europe/Paris')
-                'dateTimeThisYear',        // DateTime('2011-02-27 20:52:14', 'Africa/Lagos')
-                'dateTimeThisMonth',       // DateTime('2011-10-23 13:46:23', 'Antarctica/Vostok')
-                'amPm',                    // 'pm'
-                'dayOfMonth',              // '04'
-                'dayOfWeek',               // 'Friday'
-                'month',                   // '06'
-                'monthName',               // 'January'
-                'year',                    // '1993'
-                'century',                               // 'VI'
-                'timezone',                              // 'Europe/Paris'
+                'timezone',                              // 'Europe/Paris'           
+                
             ],
             'internet' => [
                 'email',                   // 'tkshlerin@collins.com'
