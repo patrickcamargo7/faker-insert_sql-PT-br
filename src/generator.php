@@ -19,6 +19,9 @@ for ($i=0; $i<$rowsNumber; $i++) {
         if (!empty($column['value'])) {
             $fakerValue = $column['value'];
         }
+        else if ($column['type'] == 'placa') {
+            $fakerValue = sprintf("%s-%s", strtoupper(randAlphabet(3)), rand(1000, 9999));
+        }        
         else if ($column['type'] == 'entre inteiros') {
             $fakerValue = rand($column['rand_ini'], $column['rand_fin']);
         }
@@ -39,4 +42,16 @@ for ($i=0; $i<$rowsNumber; $i++) {
     echo $query . '<br>';
 }
 
+function randAlphabet($number = 1)
+{
+    $permitted = 'abcdefghijklmnopqrstuvwxyz';
 
+    $generate = '';
+
+    for ($i=0; $i<$number; $i++) {
+        $rand = rand(0, strlen($permitted) - 1);
+        $generate .= $permitted[$rand];
+    }
+
+    return $generate;
+}

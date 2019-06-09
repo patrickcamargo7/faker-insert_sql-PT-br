@@ -19,6 +19,9 @@
                 'cnpj',
                 'rg'
             ],
+            'automoveis' => [
+                'placa'
+            ],
             'endereco' => [
                 'cityPrefix',                          // 'Lake'
                 'secondaryAddress',                    // 'Suite 961'
