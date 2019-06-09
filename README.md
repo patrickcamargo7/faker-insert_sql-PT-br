@@ -1,4 +1,4 @@
-# faker-insert_sql-PT-br
+# Geração de Scripts de Inserção utilizando biblioteca Faker
 
 ### Requerimentos
 - PHP 7.1^
