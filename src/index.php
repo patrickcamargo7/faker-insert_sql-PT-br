@@ -3,6 +3,7 @@
     <head>
         <title>SQLGen</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     </head>
     <body>
         <section class="py-5">
@@ -54,7 +55,7 @@
                                     <thead>
                                         <th width="20%">Nome da Coluna</th>
                                         <th  width="25%">Tipo do Dado</th>
-                                        <th width="15%">Raio de Geração</th>
+                                        <th width="25%">Raio de Geração</th>
                                         <th width="25%">Valor Padrão</th>
                                         <th>Ações</th>
                                     </thead>
@@ -106,6 +107,8 @@
             </div>
         </section>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+
         <script>
             $(function() {
 
