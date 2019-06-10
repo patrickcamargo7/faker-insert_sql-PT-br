@@ -7,7 +7,7 @@
     <body>
         <section class="py-5">
             <div class="container">
-                <form method="POST" action="/generator.php" class="jumbotron">
+                <form method="POST" action="/generator.php" class="jumbotron" id="form">
                     <div class="row">
                         <div class="col-lg-12">
                             <h1>Gerador</h1>
@@ -108,6 +108,35 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
             $(function() {
+
+                if ('_inputs' in localStorage) {
+                    var values = JSON.parse(localStorage.getItem("_inputs"));
+                    console.log(values);
+
+                    values.map(function(item) {
+                        var $clone = $('table > tbody > tr').last().clone(true);
+
+                        var rand = Math.floor((Math.random() * 1000) + 1) + Math.floor(Date.now() / 1000);
+
+                        $clone.find('.input-name').attr('name', 'column['+ rand +'][name]');
+                        $clone.find('.input-name').val(item.name);
+                        $clone.find('.input-type').attr('name', 'column['+ rand +'][type]');
+                        $clone.find('.input-type').val(item.type);
+                        $clone.find('.input-ini').attr('name', 'column['+ rand +'][rand_ini]');
+                        $clone.find('.input-ini').val(item.ini);
+                        $clone.find('.input-fin').attr('name', 'column['+ rand +'][rand_fin]');
+                        $clone.find('.input-fin').val(item.fin);
+                        $clone.find('.input-value').attr('name', 'column['+ rand +'][value]');
+                        $clone.find('.input-value').val(item.val);
+
+                        $('table').append($clone);
+                    });
+
+                    $('table > tbody > tr').first().remove();
+
+                    localStorage.removeItem('_inputs');
+                }
+
                 $('.btn-remove').on('click', function() {     
                     if ($('table > tbody > tr').length > 1) {
                         $(this).parent().parent().fadeOut(300, function() {
@@ -134,6 +163,29 @@
                     if(e.keyCode==43){
                         $('.btn-add').trigger('click');
                     }
+                });
+
+                $('#form').on('submit', function () {
+
+                    var inputs = [];
+
+                    $('table > tbody > tr').each(function () {
+                        var input = {
+                            name: $(this).find('.input-name').val(),
+                            type: $(this).find('.input-type').val(),
+                            ini: $(this).find('.input-ini').val(),
+                            fin: $(this).find('.input-fin').val(),
+                            value: $(this).find('.input-value').val(),
+                        };
+
+                        inputs.push(input);
+                    });
+
+                    console.log("store", inputs);
+            
+                    localStorage.setItem("_inputs", JSON.stringify(inputs));
+
+                    return true;
                 });
             });
         </script>
